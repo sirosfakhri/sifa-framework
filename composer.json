@@ -1,0 +1,20 @@
+{
+  "name": "sifa/sifa",
+  "authors": [
+    {
+      "name": "Siros Fakhri",
+      "email": "siros.fakhri@gmail.com"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "app/Helpers/helpers.php"
+    ],
+    "psr-4": {
+      "Sifa\\App\\": "app/"
+    }
+  },
+  "require": {
+    "vlucas/phpdotenv": "^5.5"
+  }
+}
