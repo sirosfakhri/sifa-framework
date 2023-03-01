@@ -5,6 +5,9 @@ namespace Sifa\App\Core;
 class Request
 {
     private array $params;
+
+
+    private array $routes_params;
     private string $method;
     private string $agent;
     private string $ip;
@@ -17,6 +20,22 @@ class Request
         $this->agent = $_SERVER['HTTP_USER_AGENT'];
         $this->ip = $_SERVER['REMOTE_ADDR'];
         $this->uri = strtok($_SERVER['REQUEST_URI'], '?');
+    }
+
+
+    public function add_route_params(string $key, string $value): void
+    {
+        $this->routes_params[$key] = $value;
+    }
+
+    public function get_route_param(string $key, string $default = null)
+    {
+        return $this->routes_params[$key] ?? $default;
+    }
+
+    public function get_route_params(): array
+    {
+        return $this->routes_params;
     }
 
     /**
