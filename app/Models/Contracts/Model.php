@@ -14,10 +14,6 @@ abstract class Model implements CRUD
 
     protected array $attribute = [];
 
-    protected function __construct()
-    {
-    }
-
     protected function getAttribute($key){
         if (!$key || !array_key_exists($key, $this->attribute))
             return null;
