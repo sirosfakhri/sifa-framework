@@ -25,15 +25,13 @@ Route::get('/middleware', function () {
 
 Route::get('/model', function () {
     $new_user = [
-        "id" => 2,
         "name" => "SiFa",
         "family" => "Fakhri",
         "email" => "sifa.fakhri@gmail.com"
-
     ];
     $users = new \Sifa\App\Models\User();
-     $users->create($new_user);
-    var_dump($users->find(5));
+    $user = $users->create($new_user);
+    var_dump($user);
 });
 
 
