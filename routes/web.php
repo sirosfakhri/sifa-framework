@@ -32,7 +32,7 @@ Route::get('/model', function () {
 
     ];
     $users = new \Sifa\App\Models\User();
-   // $users->create($new_user);
+     $users->create($new_user);
     var_dump($users->find(5));
 });
 

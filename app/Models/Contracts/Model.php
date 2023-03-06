@@ -4,7 +4,7 @@ namespace Sifa\App\Models\Contracts;
 
 abstract class Model implements CRUD
 {
-    protected string $connection;
+    protected $connection;
 
     protected string $table;
 
